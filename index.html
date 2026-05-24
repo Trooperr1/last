@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUXE Studio — Premium Creative Agency</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=SF+Pro+Display:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Cursor Glow Effect -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-logo">LUXE</div>
+            <div class="preloader-bar">
+                <div class="preloader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo">LUXE<span class="dot">.</span></a>
+            <div class="nav-links">
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#work" class="nav-link">Work</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link nav-link-cta">Start a Project</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-inner">
+            <a href="#services" class="mobile-link">Services</a>
+            <a href="#work" class="mobile-link">Work</a>
+            <a href="#about" class="mobile-link">About</a>
+            <a href="#contact" class="mobile-link mobile-link-cta">Start a Project</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="hero-gradient"></div>
+            <div class="hero-orb hero-orb-1"></div>
+            <div class="hero-orb hero-orb-2"></div>
+            <div class="hero-orb hero-orb-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge reveal">
+                <span class="badge-dot"></span>
+                Premium Creative Agency
+            </div>
+            <h1 class="hero-title">
+                <span class="hero-line reveal">We craft digital</span>
+                <span class="hero-line reveal">experiences that</span>
+                <span class="hero-line hero-line-gradient reveal">inspire.</span>
+            </h1>
+            <p class="hero-subtitle reveal">
+                Motion Graphics · Social Media · Branding
+            </p>
+            <div class="hero-cta reveal">
+                <a href="#services" class="btn btn-primary">Explore Our Work</a>
+                <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+            </div>
+        </div>
+        <div class="hero-scroll reveal">
+            <div class="scroll-indicator">
+                <div class="scroll-dot"></div>
+            </div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- Marquee -->
+    <section class="marquee-section">
+        <div class="marquee">
+            <div class="marquee-track">
+                <span>Motion Graphics</span>
+                <span class="marquee-sep">✦</span>
+                <span>Social Media Management</span>
+                <span class="marquee-sep">✦</span>
+                <span>Branding</span>
+                <span class="marquee-sep">✦</span>
+                <span>Motion Graphics</span>
+                <span class="marquee-sep">✦</span>
+                <span>Social Media Management</span>
+                <span class="marquee-sep">✦</span>
+                <span>Branding</span>
+                <span class="marquee-sep">✦</span>
+                <span>Motion Graphics</span>
+                <span class="marquee-sep">✦</span>
+                <span>Social Media Management</span>
+                <span class="marquee-sep">✦</span>
+                <span>Branding</span>
+                <span class="marquee-sep">✦</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal">What We Do</span>
+                <h2 class="section-title reveal">
+                    Three pillars of<br>
+                    <span class="text-gradient">creative excellence.</span>
+                </h2>
+            </div>
+
+            <div class="services-grid">
+                <!-- Motion Graphics -->
+                <div class="service-card reveal" data-service="motion">
+                    <div class="service-number">01</div>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 80 80" fill="none">
+                            <circle cx="40" cy="40" r="38" stroke="currentColor" stroke-width="1"/>
+                            <path d="M30 25L55 40L30 55V25Z" fill="currentColor" opacity="0.8"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Motion<br>Graphics</h3>
+                    <p class="service-desc">
+                        Cinematic animations and visual storytelling that captivate audiences.
+                        From brand films to product reveals, we bring static ideas to life with
+                        fluid, breathtaking motion.
+                    </p>
+                    <ul class="service-list">
+                        <li>Brand Animation</li>
+                        <li>Product Visualization</li>
+                        <li>Explainer Videos</li>
+                        <li>Title Sequences</li>
+                        <li>3D Motion Design</li>
+                    </ul>
+                    <div class="service-cta">
+                        <a href="#contact" class="link-arrow">
+                            Start your project
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Social Media Management -->
+                <div class="service-card reveal" data-service="social">
+                    <div class="service-number">02</div>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 80 80" fill="none">
+                            <circle cx="40" cy="40" r="38" stroke="currentColor" stroke-width="1"/>
+                            <rect x="24" y="28" width="32" height="24" rx="4" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="40" cy="40" r="6" fill="currentColor" opacity="0.8"/>
+                            <circle cx="52" cy="32" r="2" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Social Media<br>Management</h3>
+                    <p class="service-desc">
+                        Strategic social presence that builds communities and drives engagement.
+                        We craft compelling narratives across every platform, turning followers
+                        into loyal brand advocates.
+                    </p>
+                    <ul class="service-list">
+                        <li>Content Strategy</li>
+                        <li>Community Management</li>
+                        <li>Paid Social Campaigns</li>
+                        <li>Influencer Partnerships</li>
+                        <li>Analytics & Reporting</li>
+                    </ul>
+                    <div class="service-cta">
+                        <a href="#contact" class="link-arrow">
+                            Start your project
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Branding -->
+                <div class="service-card reveal" data-service="brand">
+                    <div class="service-number">03</div>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 80 80" fill="none">
+                            <circle cx="40" cy="40" r="38" stroke="currentColor" stroke-width="1"/>
+                            <path d="M40 20L56 52H24L40 20Z" stroke="currentColor" stroke-width="2" fill="currentColor" fill-opacity="0.1"/>
+                            <circle cx="40" cy="40" r="8" stroke="currentColor" stroke-width="2" fill="currentColor" fill-opacity="0.3"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Branding</h3>
+                    <p class="service-desc">
+                        Timeless brand identities that command attention and inspire trust.
+                        From strategy to visual systems, we build brands that resonate deeply
+                        and stand the test of time.
+                    </p>
+                    <ul class="service-list">
+                        <li>Brand Strategy</li>
+                        <li>Visual Identity</li>
+                        <li>Logo Design</li>
+                        <li>Brand Guidelines</li>
+                        <li>Packaging Design</li>
+                    </ul>
+                    <div class="service-cta">
+                        <a href="#contact" class="link-arrow">
+                            Start your project
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal">Our Process</span>
+                <h2 class="section-title reveal">
+                    Precision in every<br>
+                    <span class="text-gradient">pixel and frame.</span>
+                </h2>
+            </div>
+            <div class="process-grid">
+                <div class="process-step reveal">
+                    <div class="process-num">01</div>
+                    <h4>Discover</h4>
+                    <p>Deep dive into your vision, audience, and goals. We listen before we create.</p>
+                </div>
+                <div class="process-step reveal">
+                    <div class="process-num">02</div>
+                    <h4>Design</h4>
+                    <p>Meticulous craft meets bold thinking. Every detail serves a purpose.</p>
+                </div>
+                <div class="process-step reveal">
+                    <div class="process-num">03</div>
+                    <h4>Develop</h4>
+                    <p>Pixel-perfect execution with cutting-edge tools and relentless refinement.</p>
+                </div>
+                <div class="process-step reveal">
+                    <div class="process-num">04</div>
+                    <h4>Deliver</h4>
+                    <p>Launch with confidence. We ensure every touchpoint exceeds expectations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work / Portfolio Section -->
+    <section class="work" id="work">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal">Selected Work</span>
+                <h2 class="section-title reveal">
+                    Projects that speak<br>
+                    <span class="text-gradient">louder than words.</span>
+                </h2>
+            </div>
+            <div class="work-grid">
+                <div class="work-item work-item-large reveal">
+                    <div class="work-image" style="background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);">
+                        <div class="work-image-inner">
+                            <div class="work-placeholder">
+                                <div class="wp-circle"></div>
+                                <div class="wp-lines">
+                                    <div></div><div></div><div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-info">
+                        <span class="work-category">Motion Graphics</span>
+                        <h3>Ethereal — Brand Film</h3>
+                        <p>A cinematic journey through the future of sustainable luxury.</p>
+                    </div>
+                </div>
+                <div class="work-item reveal">
+                    <div class="work-image" style="background: linear-gradient(135deg, #2d1b69, #11998e);">
+                        <div class="work-image-inner">
+                            <div class="work-placeholder">
+                                <div class="wp-grid">
+                                    <div></div><div></div><div></div><div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-info">
+                        <span class="work-category">Social Media</span>
+                        <h3>Vanguard Collective</h3>
+                        <p>360° social strategy driving 400% engagement growth.</p>
+                    </div>
+                </div>
+                <div class="work-item reveal">
+                    <div class="work-image" style="background: linear-gradient(135deg, #0c0c0c, #434343);">
+                        <div class="work-image-inner">
+                            <div class="work-placeholder">
+                                <div class="wp-diamond"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-info">
+                        <span class="work-category">Branding</span>
+                        <h3>Noir Architecture</h3>
+                        <p>A bold identity for a visionary design studio.</p>
+                    </div>
+                </div>
+                <div class="work-item work-item-large reveal">
+                    <div class="work-image" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+                        <div class="work-image-inner">
+                            <div class="work-placeholder">
+                                <div class="wp-wave">
+                                    <div></div><div></div><div></div><div></div><div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-info">
+                        <span class="work-category">Motion Graphics</span>
+                        <h3>Pulse — Product Launch</h3>
+                        <p>Dynamic reveal sequence for a premium tech product.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat reveal">
+                    <div class="stat-number" data-target="150">0</div>
+                    <div class="stat-label">Projects Delivered</div>
+                </div>
+                <div class="stat reveal">
+                    <div class="stat-number" data-target="40">0</div>
+                    <div class="stat-label">Global Clients</div>
+                </div>
+                <div class="stat reveal">
+                    <div class="stat-number" data-target="12">0</div>
+                    <div class="stat-label">Awards Won</div>
+                </div>
+                <div class="stat reveal">
+                    <div class="stat-number" data-target="98">0</div>
+                    <div class="stat-label">Client Retention %</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal">Testimonials</span>
+                <h2 class="section-title reveal">
+                    Words from those<br>
+                    <span class="text-gradient">who trusted us.</span>
+                </h2>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial active reveal">
+                    <blockquote>
+                        "LUXE transformed our brand from the ground up. Their attention to detail
+                        and creative vision is simply unmatched. Every frame, every pixel — perfection."
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SC</div>
+                        <div>
+                            <div class="author-name">Sarah Chen</div>
+                            <div class="author-title">CEO, Ethereal Studios</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial reveal">
+                    <blockquote>
+                        "Our social media presence went from invisible to unforgettable.
+                        The strategy, the content, the results — everything exceeded our expectations."
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MR</div>
+                        <div>
+                            <div class="author-name">Marcus Rivera</div>
+                            <div class="author-title">Founder, Vanguard Collective</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial reveal">
+                    <blockquote>
+                        "They don't just design brands — they architect legacies.
+                        LUXE understood our vision before we could articulate it ourselves."
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AK</div>
+                        <div>
+                            <div class="author-name">Amira Khalil</div>
+                            <div class="author-title">Director, Noir Architecture</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-dots">
+                <button class="dot active" data-index="0"></button>
+                <button class="dot" data-index="1"></button>
+                <button class="dot" data-index="2"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <span class="section-tag reveal">About LUXE</span>
+                    <h2 class="section-title reveal">
+                        Where artistry meets<br>
+                        <span class="text-gradient">precision.</span>
+                    </h2>
+                    <p class="about-text reveal">
+                        We are a collective of designers, animators, strategists, and dreamers
+                        united by an obsession with craft. Every project we take on is an
+                        opportunity to push creative boundaries and deliver work that leaves
+                        a lasting impression.
+                    </p>
+                    <p class="about-text reveal">
+                        Based in the intersection of art and technology, we believe great
+                        design isn't just seen — it's felt. That's why every detail matters.
+                        That's why we never settle.
+                    </p>
+                    <div class="about-values reveal">
+                        <div class="value">
+                            <h5>Obsessive Craft</h5>
+                            <p>Every pixel is intentional</p>
+                        </div>
+                        <div class="value">
+                            <h5>Bold Thinking</h5>
+                            <p>We challenge the expected</p>
+                        </div>
+                        <div class="value">
+                            <h5>Lasting Impact</h5>
+                            <p>Design that endures</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual reveal">
+                    <div class="about-image">
+                        <div class="about-image-inner">
+                            <div class="about-shape about-shape-1"></div>
+                            <div class="about-shape about-shape-2"></div>
+                            <div class="about-shape about-shape-3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-inner reveal">
+                <h2>Let's create something<br><span class="text-gradient">extraordinary.</span></h2>
+                <p>Ready to elevate your brand? Let's start a conversation.</p>
+                <a href="#contact" class="btn btn-primary btn-large">Start a Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <span class="section-tag reveal">Get in Touch</span>
+                    <h2 class="section-title reveal">
+                        Let's build<br>
+                        <span class="text-gradient">together.</span>
+                    </h2>
+                    <p class="contact-text reveal">
+                        Have a project in mind? We'd love to hear about it.
+                        Drop us a line and let's explore the possibilities.
+                    </p>
+                    <div class="contact-details reveal">
+                        <a href="mailto:hello@luxestudio.com" class="contact-link">
+                            <span class="contact-label">Email</span>
+                            <span>hello@luxestudio.com</span>
+                        </a>
+                        <a href="tel:+1234567890" class="contact-link">
+                            <span class="contact-label">Phone</span>
+                            <span>+1 (234) 567-890</span>
+                        </a>
+                        <div class="contact-link">
+                            <span class="contact-label">Location</span>
+                            <span>New York · Dubai · London</span>
+                        </div>
+                    </div>
+                    <div class="contact-socials reveal">
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">Behance</a>
+                        <a href="#" class="social-link">Dribbble</a>
+                        <a href="#" class="social-link">LinkedIn</a>
+                    </div>
+                </div>
+                <div class="contact-form-wrap reveal">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required placeholder=" ">
+                            <label for="name">Your Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required placeholder=" ">
+                            <label for="email">Your Email</label>
+                        </div>
+                        <div class="form-group">
+                            <select id="service" name="service" required>
+                                <option value="" disabled selected>Select a Service</option>
+                                <option value="motion">Motion Graphics</option>
+                                <option value="social">Social Media Management</option>
+                                <option value="branding">Branding</option>
+                            </select>
+                            <label for="service">Service</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="4" required placeholder=" "></textarea>
+                            <label for="message">Tell us about your project</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <span>Send Message</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">LUXE<span class="dot">.</span></a>
+                    <p>Premium creative agency specializing in motion graphics, social media management, and branding.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h6>Services</h6>
+                        <a href="#services">Motion Graphics</a>
+                        <a href="#services">Social Media</a>
+                        <a href="#services">Branding</a>
+                    </div>
+                    <div class="footer-col">
+                        <h6>Company</h6>
+                        <a href="#about">About</a>
+                        <a href="#work">Work</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                    <div class="footer-col">
+                        <h6>Connect</h6>
+                        <a href="#">Instagram</a>
+                        <a href="#">Behance</a>
+                        <a href="#">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 LUXE Studio. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

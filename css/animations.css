@@ -1,0 +1,119 @@
+/* ============================================
+   LUXE Studio — Scroll Reveal Animations
+   ============================================ */
+
+/* --- Reveal Animations --- */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal:nth-child(2) { transition-delay: 0.1s; }
+.reveal:nth-child(3) { transition-delay: 0.2s; }
+.reveal:nth-child(4) { transition-delay: 0.3s; }
+
+/* Service card stagger */
+.service-card.reveal:nth-child(1) { transition-delay: 0s; }
+.service-card.reveal:nth-child(2) { transition-delay: 0.15s; }
+.service-card.reveal:nth-child(3) { transition-delay: 0.3s; }
+
+/* Process step stagger */
+.process-step.reveal:nth-child(1) { transition-delay: 0s; }
+.process-step.reveal:nth-child(2) { transition-delay: 0.1s; }
+.process-step.reveal:nth-child(3) { transition-delay: 0.2s; }
+.process-step.reveal:nth-child(4) { transition-delay: 0.3s; }
+
+/* Stat stagger */
+.stat.reveal:nth-child(1) { transition-delay: 0s; }
+.stat.reveal:nth-child(2) { transition-delay: 0.1s; }
+.stat.reveal:nth-child(3) { transition-delay: 0.2s; }
+.stat.reveal:nth-child(4) { transition-delay: 0.3s; }
+
+/* --- Smooth Hover Transitions --- */
+.service-card,
+.work-item,
+.btn,
+.nav-link,
+.social-link,
+.footer-col a {
+    will-change: transform;
+}
+
+/* --- Gradient Animation --- */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.text-gradient,
+.hero-line-gradient {
+    background-size: 200% auto;
+    animation: gradientShift 5s ease infinite;
+}
+
+/* --- Loading Skeleton Shimmer --- */
+@keyframes shimmer {
+    0% { background-position: -100% 0; }
+    100% { background-position: 100% 0; }
+}
+
+/* --- Smooth Page Transitions --- */
+body {
+    opacity: 0;
+    animation: fadeInBody 0.6s ease forwards;
+    animation-delay: 1.6s;
+}
+
+@keyframes fadeInBody {
+    to { opacity: 1; }
+}
+
+/* --- Parallax subtle effect --- */
+@media (prefers-reduced-motion: no-preference) {
+    .hero-orb {
+        will-change: transform;
+    }
+
+    .about-shape {
+        will-change: transform;
+    }
+}
+
+/* --- Respect reduced motion --- */
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .hero-orb,
+    .about-shape,
+    .marquee-track,
+    .badge-dot,
+    .scroll-dot,
+    .wp-circle,
+    .wp-grid div,
+    .wp-diamond,
+    .wp-wave div {
+        animation: none;
+    }
+
+    body {
+        opacity: 1;
+        animation: none;
+    }
+
+    .text-gradient,
+    .hero-line-gradient {
+        animation: none;
+    }
+}
