@@ -21,7 +21,7 @@
     const ctx = canvas.getContext('2d');
     let width, height;
     let time = 0;
-    let mouse = { x: 0, y: 0, sx: 0, sy: 0 };
+    let mouse = { x: -1000, y: -1000, sx: -1000, sy: -1000 };
     let animId;
     let dpr = Math.min(window.devicePixelRatio || 1, 2);
 
@@ -459,8 +459,8 @@
         drawLiquidAurora();
         drawCaustics();
         drawLightSweeps();
-        drawDiamonds();
         updateDiamonds();
+        drawDiamonds();
         drawReflectiveFloor();
         drawCinematicDepth();
 

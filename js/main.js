@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const preloader = document.getElementById('preloader');
     setTimeout(() => {
         preloader.classList.add('hidden');
-    }, 2200);
+    }, 2000);
 
     // --- Grain Overlay ---
     const grain = document.createElement('div');
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         btn.addEventListener('mouseleave', () => {
-            btn.style.transform = 'translate(0, 0) scale(1)';
+            btn.style.transform = '';
         });
     });
 
@@ -99,31 +99,11 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }, {
-        threshold: 0.08,
-        rootMargin: '0px 0px -80px 0px'
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
     });
 
     revealElements.forEach(el => revealObserver.observe(el));
-
-    // --- Hero Line Clip Reveal ---
-    const heroLines = document.querySelectorAll('.hero-line');
-    setTimeout(() => {
-        heroLines.forEach((line, i) => {
-            setTimeout(() => {
-                line.classList.add('visible');
-            }, 2400 + i * 200);
-        });
-    }, 0);
-
-    // --- Hero Badge + Subtitle + CTA reveal ---
-    const heroReveals = document.querySelectorAll('.hero .reveal');
-    setTimeout(() => {
-        heroReveals.forEach((el, i) => {
-            setTimeout(() => {
-                el.classList.add('visible');
-            }, 2600 + i * 150);
-        });
-    }, 0);
 
     // --- Counter Animation ---
     const statNumbers = document.querySelectorAll('.stat-number');
@@ -200,7 +180,9 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+            const href = this.getAttribute('href');
+            if (href === '#') return;
+            const target = document.querySelector(href);
             if (target) {
                 const offset = 80;
                 const top = target.getBoundingClientRect().top + window.scrollY - offset;
@@ -238,22 +220,10 @@ document.addEventListener('DOMContentLoaded', () => {
             requestAnimationFrame(() => {
                 const scrolled = window.scrollY;
 
-                // Hero orbs parallax
                 const orbs = document.querySelectorAll('.hero-orb');
                 orbs.forEach((orb, i) => {
                     const speed = (i + 1) * 0.04;
                     orb.style.transform = `translateY(${scrolled * speed}px)`;
-                });
-
-                // About shapes parallax
-                const shapes = document.querySelectorAll('.about-shape');
-                shapes.forEach((shape, i) => {
-                    const rect = shape.closest('.about-image');
-                    if (rect) {
-                        const offset = rect.getBoundingClientRect().top;
-                        const speed = (i + 1) * 0.02;
-                        shape.style.transform = `translateY(${offset * speed}px)`;
-                    }
                 });
 
                 ticking = false;
@@ -293,7 +263,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         card.addEventListener('mouseleave', () => {
-            card.style.transform = 'translateY(0) perspective(1000px) rotateX(0) rotateY(0)';
+            card.style.transform = '';
         });
     });
 
@@ -307,30 +277,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         item.addEventListener('mouseleave', () => {
-            item.style.transform = 'scale(1) perspective(1200px) rotateX(0) rotateY(0)';
+            item.style.transform = '';
         });
-    });
-
-    // --- Smooth Opacity for Sections on Scroll ---
-    const fadeOnScroll = document.querySelectorAll('.services, .work, .about, .cta-section');
-
-    const fadeObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, {
-        threshold: 0.05,
-        rootMargin: '0px 0px -50px 0px'
-    });
-
-    fadeOnScroll.forEach(section => {
-        section.style.opacity = '0';
-        section.style.transform = 'translateY(30px)';
-        section.style.transition = 'opacity 1.2s cubic-bezier(0.16,1,0.3,1), transform 1.2s cubic-bezier(0.16,1,0.3,1)';
-        fadeObserver.observe(section);
     });
 
 });
